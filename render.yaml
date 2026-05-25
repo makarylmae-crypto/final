@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: freshkart-ph
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20.19.0
+      - key: MYSQL_SSL
+        value: true
